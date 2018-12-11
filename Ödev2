@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main() {
+	int a,b,c,toplam=0;
+	baslangic:
+	printf("Lutfen birinci sayiyi giriniz = ");
+	scanf("%d",&a);
+	printf("Lutfen ikinci sayiyi giriniz = ");
+	scanf("%d",&b);
+	if (a<2 || b<2)
+	{
+		printf("Lutfen 2'den buyuk bir sayi giriniz!\n\n");
+		goto baslangic;
+	}
+	else
+	{
+		if(a<b)
+		{
+			for(a;a<=b;a++)
+			{
+				c=2;
+				while(a%c!=0)
+				{
+					c++;
+				}
+				if(a==c)
+					toplam=toplam+a;
+			}
+			printf("Sonucunuz = %d",toplam);
+		}
+		else if (b<a)
+		{
+			for(b;b<=a;b++)
+			{
+				c=2;
+				while(b%c!=0)
+				{
+					c++;
+				}
+				if(b==c)
+					toplam=toplam+b;
+			}
+			printf("Sonucunuz = %d",toplam);
+		}
+	}
+}
